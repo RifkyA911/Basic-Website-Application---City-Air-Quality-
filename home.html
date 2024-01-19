@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="icon" type="image/jpg" href="images/icon.jpg">
+		<title>
+				Pendataan Kualitas Udara di Kota Indonesia
+		</title>
+	<link rel="stylesheet" href="home.css">
+	<script src="pemweb.js" type="text/javascript"></script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+</head>
+<body>
+
+
+<div class="BOTTOM NAVIGATION">
+
+<!-- ######  BOTTOM BAR  ##### -->
+  <div class="bottombar">
+      <a style="padding-left: 10px;" class="active2" onclick="PrintHalaman()" href="#Print">Print</a>
+      <a id="myBtn" style="padding-left: 10px; " href="#contact">Contact</a>
+      <a style="float:right">Created on 2019</a>
+  </div>
+
+    <script>
+      function PrintHalaman() {
+        window.print();
+      }
+    </script>
+
+
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close">&times;</span>
+          <h2>Silahkan untuk Menambah saran atau kritik lebih lanjut ke kontak berikut...</h2>
+          </div>
+        <div class="modal-body">
+          <p>E-mail : rifkyakhmad911@gmail.com</p>
+          <p>Mahasiswa UPN Veteran Jatim 2018</p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var modal = document.getElementById("myModal");
+      var btn = document.getElementById("myBtn");
+      var span = document.getElementsByClassName("close")[0];
+      btn.onclick = function() {
+        modal.style.display = "block";
+      }
+      span.onclick = function() {
+        modal.style.display = "none";
+      }
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+    </script>
+</div>
+
+<!-- ########   <BODY></BODY>   ######## -->
+
+<div class="header1" style="margin-left: 5%" > 
+  <h2>Statistik Pendataan Kualitas Udara Kota</h2>
+  <p>Website Membahas tentang data tentang kualitas udara yang ada di kota-kota besar indonesia.</p>
+</div>
+
+<div class="datetime">
+  <div class="dateblur"></div>
+    <p id="demo"></p>
+</div>
+
+  <script>
+  var d = new Date();
+  document.getElementById("demo").innerHTML = d;
+  </script>
+
+<!-- ========================= Slide Show  ================================-->
+
+<div class="slideshow-container">
+  <div class="border">
+    <div class="mySlides fade">
+      <img src="images/Slide1.jpg" style="width:500px">
+    </div>
+
+    <div class="mySlides fade">
+      <img src="images/Slide2.jpg" style="width:500px">
+    </div>
+
+    <div class="mySlides fade">
+      <img src="images/Slide3.jpg" style="width:500px">
+    </div>
+
+    <div class="mySlides fade">
+      <img src="images/Slide4.jpg" style="width:500px">
+    </div>
+
+    <div class="mySlides fade">
+      <img src="images/Slide5.jpg" style="width:500px">
+    </div>
+
+    <div class="mySlides fade">
+      <img src="images/Slide6.jpg" style="width:500px">
+    </div>
+
+    <div class="mySlides fade">
+      <img src="images/Slide7.jpg" style="width:500px">
+    </div>
+
+    <div class="mySlides fade">
+      <img src="images/Slide8.jpg" style="width:500px">
+    </div>
+
+    <div class="mySlides fade">
+      <img src="images/Slide9.jpg" style="width:500px">
+    </div>
+
+    <div class="dotmain" style="text-align:center">
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+    </div>
+  </div>
+</div>
+
+<!-- PNG -->
+
+  <div class="save">
+    <img src="images/savecity.png">
+  </div>
+<br>
+
+
+<script>
+  var slideIndex = 0;
+  showSlides();
+
+  function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active3", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active3";
+    setTimeout(showSlides, 3500); // Change image every 3.5 seconds
+}
+</script>
+
+
+<!--  accordion menu --> 
+<div class="timeLine">
+  <div class="line"></div>
+    <div class="line2"></div>
+    <button class="accordion">Tujuan Website</button>
+    <div class="panel">
+      <p>Website ini dirancang untuk kepentingan masyarakat tentang informasi kualitas udara kota-kota besar yang ada di indonesia guna mengetahui dan mempersiapkan untuk beraktifitas di dalam kota.</p>
+    </div>
+
+    <button class="accordion">Fitur dari Website</button>
+    <div class="panel">
+      <p>Dengan berbagai rancangan HTML 5 dan CSS3 serta beberapa fitur chart ExtJS yang memeberikan tampilan visual tentang data statistik diagram modern yang nyaman serta dapat mudah untuk di mengerti oleh pengguna.</p>
+    </div> 
+
+    <button class="accordion">Sumber Data Informasi Website</button>
+    <div class="panel" >
+      <p>Menggunakan Data-data dari berbagai sumber seperti halnya dari data website pemerintahan yaitu BMKG maupun lainnya. Selanjutnya Data diolah menjadi informasi Grafik dalam bentuk berbagai bentuk dan jenis Diagram, sehingga data yang ditampilkan dapat dimengerti oleh pengunjung.</p>
+    </div>
+
+    <button class="accordion">Manfaat dari Website</button>
+    <div class="panel">
+      <p>Dengan menggunakan website ini diharapkan masyarakat mengetahui informasi tentang kualitas udara di kota serta dapat saling menjaga diri sendiri demi berlangsungnya kehidupan yang nyaman dan tentram.</p>
+  </div>
+</div>
+
+<script>
+  var acc = document.getElementsByClassName("accordion");
+  var i;
+
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      } 
+    });
+  }
+</script>
+
+<!-- ######   NAVIGATION   ##### -->
+
+<!-- navbar -->
+
+<div class="navbar">
+  <span style="width: 20px;" onclick="openNav()"><i class="fas fa-bars"></i></span>
+  <a class="active"><i class="fa fa-fw fa-home"></i> Home</a>
+  <a href="kota.html"><i class="far fa-building"></i> Kualitas Udara Kota</a> 
+  <a href="tahun.html"><i class="fa fa-bar-chart"></i> Perbandingan Tahun</a> 
+  <a href="tentang.html"><i class="fa fa-fw fa-user"></i> Tentang</a>
+
+<!-- search bar --> 
+
+  <div class="search-container">
+    <form action="/action_page.php">
+    <input type="text" placeholder="Search.." name="search">
+    <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+  </div>
+</div>
+
+<!-- side bar -->
+  
+<div id="mySidenav" class="sidenav"> 
+  <img src="images/tukang_roti.png" style="width: 150px; height: 150px;">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="menu">
+  <a href="#">Login Admin</a>
+  <a href="#">Services</a>
+  <a href="#">Data Csv</a>
+  <a href="#">Login Admin</a>
+  </div>
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+
+</body>
+</html>

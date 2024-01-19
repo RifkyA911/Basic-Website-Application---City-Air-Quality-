@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="icon" type="image/png" href="images/icon.png">
+		<title>
+				Pendataan Kualitas Udara di Kota Indonesia
+		</title>
+	<link rel="stylesheet" href="tahun.css">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/extjs/6.0.0/classic/theme-classic/resources/theme-classic-all.css"/>
+	<script type = "text/javascript" src = "https://cdnjs.cloudflare.com/ajax/libs/extjs/6.0.0/ext-all.js"></script>
+	<script type = "text/javascript" src = "https://cdnjs.cloudflare.com/ajax/libs/extjs/6.0.0/packages/charts/classic/charts.js"></script>
+	<link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/extjs/6.0.0/packages/charts/classic/classic/resources/charts-all.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+</head>
+<body>
+
+
+
+<div class="BOTTOM NAVIGATION">
+
+<!-- ######  BOTTOM BAR  ##### -->
+  <div class="bottombar">
+      <a style="padding-left: 10px;" class="active2" onclick="PrintHalaman()" href="#Print">Print</a>
+      <a id="myBtn" style="padding-left: 10px; " href="#contact">Contact</a>
+      <a style="float:right">Created on 2019</a>
+  </div>
+
+    <script>
+      function PrintHalaman() {
+        window.print();
+      }
+    </script>
+
+
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close">&times;</span>
+          <h2>Silahkan untuk Menambah saran atau kritik lebih lanjut ke kontak berikut...</h2>
+          </div>
+        <div class="modal-body">
+          <p>E-mail : rifkyakhmad911@gmail.com</p>
+          <p>Mahasiswa UPN Veteran Jatim 2018</p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var modal = document.getElementById("myModal");
+      var btn = document.getElementById("myBtn");
+      var span = document.getElementsByClassName("close")[0];
+      btn.onclick = function() {
+        modal.style.display = "block";
+      }
+      span.onclick = function() {
+        modal.style.display = "none";
+      }
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+    </script>
+</div>
+
+<!-- ########   <BODY></BODY>   ######## -->
+
+<div class="header1" style="margin-left: 5%" > 
+  <h2>Data Tabel Index Perbandingan Tahun Kualitas Udara Kota</h2>
+  <p>Menampilkan informasi tentang sajian data grafik tabel tahunan.</p>
+</div>
+
+<div class="datetime">
+  <div class="dateblur"></div>
+    <p id="demo"></p>
+</div>
+
+  <script>
+  var d = new Date();
+  document.getElementById("demo").innerHTML = d;
+  </script>
+
+<!--============= Content ==================-->
+
+<div class="index">
+<p>Tabel Index Perbandingan Tahun Kualitas Udara Kota 2019</p>
+<input id="myInput" type="text" placeholder="Search..">
+<br>
+<br>
+<table>
+  <thead>
+    <tr>
+      <th>No</th>
+      <th>Kota</th>
+      <th>2018</th>
+      <th>2017</th>
+      <th>2016</th>
+      <th>2015</th>
+      <th>2014</th>
+      <th>Rata-rata</th>
+    </tr>
+  </thead>
+  <tbody id="myTable">
+  <tr>
+    <td>1</td>
+    <td>Surabaya</td>
+    <td>56</td>
+    <td>59</td>
+    <td>63</td>
+    <td>72</td>
+    <td>80</td>
+    <td>68</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>Jakarta</td>
+    <td>49</td>
+    <td>55</td>
+    <td>60</td>
+    <td>62</td>
+    <td>68</td>
+    <td>53,2</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>Bandung</td>
+    <td>53</td>
+    <td>56</td>
+    <td>61</td>
+    <td>62</td>
+    <td>68</td>
+    <td>60</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>Yogyakarta</td>
+    <td>59</td>
+    <td>61</td>
+    <td>62</td>
+    <td>70</td>
+    <td>79</td>
+    <td>65,8</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>Banten</td>
+    <td>59</td>
+    <td>61</td>
+    <td>62</td>
+    <td>70</td>
+    <td>79</td>
+    <td>65,8</td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td>Banjarmasin</td>
+    <td>59</td>
+    <td>61</td>
+    <td>62</td>
+    <td>70</td>
+    <td>79</td>
+    <td>65,8</td>
+  </tr>
+  <tr>
+    <td>7</td>
+    <td>Palembang</td>
+    <td>59</td>
+    <td>61</td>
+    <td>62</td>
+    <td>70</td>
+    <td>79</td>
+    <td>65,8</td>
+  </tr>
+  <tr>
+    <td>8</td>
+    <td>Pekanbaru</td>
+    <td>59</td>
+    <td>61</td>
+    <td>62</td>
+    <td>70</td>
+    <td>79</td>
+    <td>65,8</td>
+  </tr>
+  <tr>
+    <td>9</td>
+    <td>Jambi</td>
+    <td>59</td>
+    <td>61</td>
+    <td>62</td>
+    <td>70</td>
+    <td>79</td>
+    <td>65,8</td>
+  </tr>
+  <tr>
+    <td>10</td>
+    <td>Medan</td>
+    <td>59</td>
+    <td>61</td>
+    <td>62</td>
+    <td>70</td>
+    <td>79</td>
+    <td>65,8</td>
+  </tr>
+  </tbody>
+</table>
+<p>*  1~25 berbahaya, 26~50 buruk, 51~75 kurang baik, 76~100 baik</p>
+</div>
+
+<!-- ============== Chart ============= -->
+<div id="Bar1" style="position:absolute; left:55%; top:50%;">
+  <script>Ext.create({
+     xtype: 'cartesian',
+     renderTo: 'Bar1',
+     width: 500,
+     height: 400,
+     innerPadding: '0 10 0 10',
+     store: {
+         fields: ['Kota', '2018', '2017', '2016', '2015', '2014'],
+         data: [{
+             Kota: 'Surabaya',
+             2018: 12,
+             2017: 21,
+             2016: 10,
+             2015: 22,
+             2014: 21
+         }, {
+             Kota: 'Jakarta',
+             2018: 42,
+             2017: 28,
+             2016: 7,
+             2015: 12,
+             2014: 19
+         }, {
+             Kota: 'Bandung',
+             2018: 22,
+             2017: 21,
+             2016: 5,
+             2015: 22,
+             2014: 21
+         }, {
+             Kota: 'Yogyakarta',
+             2018: 12,
+             2017: 21,
+             2016: 2,
+             2015: 22,
+             2014: 21
+         }, {
+             Kota: 'Serang',
+             2018: 12,
+             2017: 21,
+             2016: 19,
+             2015: 22,
+             2014: 21
+         }, {
+             Kota: 'Banjarmasin',
+             2018: 12,
+             2017: 21,
+             2016: 13,
+             2015: 22,
+             2014: 21
+         }, {
+             Kota: 'Palembang',
+             2018: 12,
+             2017: 21,
+             2016: 19,
+             2015: 22,
+             2014: 21
+         }, {
+             Kota: 'Pekanbaru',
+             2018: 12,
+             2017: 21,
+             2016: 19,
+             2015: 22,
+             2014: 21
+         }, {
+             Kota: 'Jambi',
+             2018: 12,
+             2017: 21,
+             2016: 19,
+             2015: 22,
+             2014: 21
+         }, {
+             Kota: 'Medan',
+             2018: 12,
+             2017: 21,
+             2016: 19,
+             2015: 22,
+             2014: 21
+         } ]
+     },
+     axes: [{
+         type: 'numeric3d',
+         position: 'left',
+         fields: ['2018', '2017', '2016', '2015', '2014'],
+         title: {
+             text: 'Inventory',
+             fontSize: 15
+         },
+         grid: {
+             odd: {
+                 fillStyle: 'rgba(255, 255, 255, 0.06)'
+             },
+             even: {
+                 fillStyle: 'rgba(0, 0, 0, 0.03)'
+             }
+         }
+     }, {
+         type: 'category3d',
+         position: 'bottom',
+         title: {
+             text: 'People',
+             fontSize: 15
+         },
+         fields: 'Kota'
+     }],
+     series: {
+         type: 'bar3d',
+         xField: 'Kota',
+         yField: ['2018', '2017', '2016', '2015', '2014']
+     }
+  });
+  </script>
+  <p>*Grafik Batang tentang Perbandingan Tahun Kualitas Udara di Kota Indonesia</p>
+</div>
+<div id="Bar2" style="position:absolute; left:55%; top:110%;">
+  <script>
+Ext.create('Ext.panel.Panel', {
+    renderTo: 'Bar2',
+    height: 450,
+    width: 500,
+    items: [{
+        xtype: 'polar',
+        width: 500,
+        height: 450,
+        theme: 'green',
+        interactions: ['rotate', 'itemhighlight'],
+        store: {
+            fields: ['name', 'data3'],
+            data: [{
+                'name': 'Surabaya',
+           'data3': 14
+       }, {
+            'name': 'Jakarta',
+           'data3': 16
+       }, {
+            'name': 'Banten',
+           'data3': 14
+       }, {
+            'name': 'Bandung',
+           'data3': 6
+       }, {
+            'name': 'Yogyakarta',
+           'data3': 11
+       }, {
+            'name': 'Banjarmasin',
+           'data3': 6
+       }, {
+            'name': 'Palembang',
+           'data3': 9
+       }, {
+            'name': 'Pekanbaru',
+           'data3': 6
+       }, {
+            'name': 'Jambi',
+           'data3': 5
+       }, {
+           'name': 'Medan',
+           'data3': 6
+            }]
+        },
+        series: {
+            type: 'pie3d',
+            highlight: true,
+            angleField: 'data3',
+            label: {
+                field: 'name',
+                display: 'inside'
+            },
+            donut: 30
+        }
+    },]
+});
+  </script>
+</div>
+
+<!-- ######   NAVIGATION   ##### -->
+
+<!-- navbar -->
+
+<div class="navbar">
+  <span style="width: 20px;" onclick="openNav()"><i class="fas fa-bars"></i></span>
+  <a href="home.html"><i class="fa fa-fw fa-home"></i> Home</a>
+  <a href="kota.html"><i class="far fa-building"></i> Kualitas Udara Kota</a> 
+  <a class="active"><i class="fa fa-bar-chart"></i> Perbandingan Tahun</a> 
+  <a href="tentang.html"><i class="fa fa-fw fa-user"></i> Tentang</a>
+
+
+<!-- search bar --> 
+
+  <div class="search-container">
+    <form action="/action_page.2016p">
+    <input type="text" placeholder="Search.." name="search">
+    <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+  </div>
+</div>
+
+
+<!-- side bar -->
+  
+<!-- <div id="mySidenav" class="sidenav"> 
+  <img src="images/tukang_roti.png" style="width: 150px; height: 150px;">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="menu">
+  <a href="#">Login Admin</a>
+  <a href="#">Services</a>
+  <a href="#">Data Csv</a>
+  <a href="#">Log Out</a>
+  </div>
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script> -->
+
+</body>
+</html>
